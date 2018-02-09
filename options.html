@@ -1,0 +1,84 @@
+<!DOCTYPE html> 
+<html id="html">
+   <head>
+      <meta charset="UTF-8">
+      <title>Options - Making Progress</title>
+      <link rel="stylesheet" href="css/options.css" type="text/css">
+      <script src="js/jquery.min.js"></script>
+      <script src="js/progressBar.js"></script>
+      <script src="js/notify.min.js"></script>
+   </head>
+   <body>
+      <div class="container">
+         <div class="inner">
+            <div class="instructions">
+               <div class="bar-container">
+				<div id="hour" class="bar"></div>
+				<div id="day" class="bar"></div>
+				<div id="week" class="bar"></div>
+				<div id="month" class="bar"></div>
+				<div id="year" class="bar"></div>
+               </div>
+               <div class="instructions-text-container">
+	               <h1 class="title">Making Progress</h1>
+				   <p>Designed By <a href="http://ryderdamen.com/fresh-air" target="_blank">Ryder Damen</a></p>
+				   <p>A simple tool for time tracking.</p>
+               </div>
+            </div> <!-- End of Instructions -->
+            <div class="options-container">
+	            <h1 class="title">You've <i>Always</i> Got Options:</h1>
+	            <table class="options-table">
+		            <tr>
+			            <th>Choose Your Bars</th>
+		            </tr>
+		            <tr>
+						<td>Hour Bar</td>
+						<td><input type="checkbox" id="showHour"></td>
+					</tr>
+					<tr>
+						<td>Day Bar</td>
+						<td><input type="checkbox" id="showDay"></td>
+					</tr>
+					<tr>
+						<td>Week Bar</td>
+						<td><input type="checkbox" id="showWeek"></td>
+					</tr>
+					<tr>
+						<td>Month Bar</td>
+						<td><input type="checkbox" id="showMonth"></td>
+					</tr>
+					<tr>
+						<td>Year Bar</td>
+						<td><input type="checkbox" id="showYear"></td>
+					</tr>
+		            <tr>
+			            <th>Other Options</th>
+		            </tr>
+		            <tr>
+			            <td>Show Labels (H D W M Y)</td>
+			            <td><input type="checkbox" id="showLabels"></td>
+		            </tr>
+		            <tr>
+			            <td>Show Percentages</td>
+			            <td><input type="checkbox" id="showPercent"></td>
+		            </tr>
+		            <tr>
+			            <td>Bar Colour (Hex) <a href="http://htmlcolorcodes.com/" target="_blank">(More Info)</a></td>
+			            <td><input type="text" id="barColorHex"></td>
+					</tr>
+					<tr>
+						<td>Bar Loading Length (In Seconds)</td>
+						<td><input type="number" id="loadLength"></td>
+					</tr>
+		            <tr>
+			            <td>
+				            <button id="submitButton">Save Settings</button>
+			            </td>
+		            </tr>
+	            </table>
+            </div>
+         </div> <!-- End of Inner -->
+      </div>
+   </body>
+   <script src="js/options.js"></script>
+</html>
