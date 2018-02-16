@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Making Progress",
-  "version": "1.0",
+  "version": "1.0.1",
   "description": "Minimal progress bars for your hour, day, week, month, and year in your new tab.",
   "author": "Ryder Damen",
   "icons": {

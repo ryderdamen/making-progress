@@ -1,6 +1,6 @@
 /*
 Main.js
-Version: 1.0.1
+Version: 1.0.2
 Author: Ryder Damen
 ryderdamen.com/making-progress
 */
@@ -110,8 +110,9 @@ function parseCurrentDate(recursivelyCalled = false, userOptions) {
 	var endOfYear = new Date(current.getFullYear(), 11, 31, 23, 59, 59).getTime() / 1000; // Get the end of the year
 	var startOfMonth = new Date(current.getFullYear(), current.getMonth(), 1, 0, 0, 0).getTime() / 1000;
 	var endOfMonth = new Date(current.getFullYear(), current.getMonth() + 1, 0, 23, 59, 59).getTime() / 1000; // Get the end of this month
-	var startOfWeek = new Date(current.getFullYear(), current.getMonth(), current.getDate() - (6 - current.getDay()), 23, 59, 59).getTime() / 1000;;
-	var endOfWeek = new Date(current.getFullYear(), current.getMonth(), 6 - current.getDay() + current.getDate(), 23, 59, 59).getTime() / 1000;;
+	//var startOfWeek = new Date(current.getFullYear(), current.getMonth(), current.getDate() - (6 - current.getDay()), 23, 59, 59).getTime() / 1000;
+	var endOfWeek = new Date(current.getFullYear(), current.getMonth(), 6 - current.getDay() + current.getDate(), 23, 59, 59).getTime() / 1000;
+	var startOfWeek = endOfWeek - 604800;
 	var startOfDay = new Date(current.getFullYear(), current.getMonth(), current.getDate(), 0, 0, 0).getTime() / 1000;
 	var endOfDay = new Date(current.getFullYear(), current.getMonth(), current.getDate(), 23, 59, 59).getTime() / 1000;
 	var startOfHour = new Date(current.getFullYear(), current.getMonth(), current.getDate(), current.getHours(), 0, 0).getTime() / 1000;
@@ -123,6 +124,15 @@ function parseCurrentDate(recursivelyCalled = false, userOptions) {
 	var percentComplete_week = ((endOfWeek - startOfWeek) - (endOfWeek - currentTime)) / (endOfWeek - startOfWeek);
 	var percentComplete_day = ((endOfDay - startOfDay) - (endOfDay - currentTime)) / (endOfDay - startOfDay);
 	var percentComplete_hour = ((endOfHour - startOfHour) - (endOfHour - currentTime)) / (endOfHour - startOfHour);
+	
+/*	
+	// Debug Stuff
+	console.log("Hour: " + Math.floor(percentComplete_hour * 100) + "%")
+	console.log("Day: " + Math.floor(percentComplete_day * 100) + "%")
+	console.log("Week: " + Math.floor(percentComplete_week * 100) + "%")
+	console.log("Month: " + Math.floor(percentComplete_month * 100) + "%")
+	console.log("Year: " + Math.floor(percentComplete_year * 100) + "%")
+*/
 
 
 	// Animate Bars
